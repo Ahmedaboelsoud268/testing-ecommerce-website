@@ -20,7 +20,7 @@ public class Hooks {
     }
     @After
     public static void quitDriver() throws InterruptedException {
-        Thread.sleep(3000);
-        driver.quit();
+//        Thread.sleep(3000);
+//        driver.quit();
     }
 }
