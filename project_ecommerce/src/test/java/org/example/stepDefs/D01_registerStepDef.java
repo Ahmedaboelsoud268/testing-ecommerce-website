@@ -7,12 +7,7 @@ public class D01_registerStepDef {
     @Given("user go to register page")
     public void user_go_to_register_page()
     {
-        System.out.println("Please complete the CAPTCHA manually, then press Enter to continue.");
-        try {
-            System.in.read(); // Wait for user to press Enter
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        
         register.registerlink().click();
     }
 }
