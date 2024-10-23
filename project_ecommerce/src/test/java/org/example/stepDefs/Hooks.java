@@ -8,7 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import java.time.Duration;
 
 public class Hooks {
-    public static WebDriver driver;
+    public static ChromeDriver driver;
     @Before
     public static void OpenBrowser()
     {
@@ -16,11 +16,11 @@ public class Hooks {
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofMillis(10000));
         //navigate to url
-        driver.get("https://demo.nopcommerce.com/");
+        driver.get("https://yourstore.io/");
     }
     @After
     public static void quitDriver() throws InterruptedException {
-//        Thread.sleep(3000);
-//        driver.quit();
+        Thread.sleep(1000);
+        driver.quit();
     }
 }
